@@ -14,6 +14,9 @@ class CampaignNew extends Component {
 
   onSubmit = async (e) => {
     e.preventDefault();
+    if (!window.ethereum) {
+      return alert("Please install Metamask!");
+    }
     this.setState({ isLoading: true, errorMessage: "" });
     try {
       const accounts = await web3.eth.getAccounts();

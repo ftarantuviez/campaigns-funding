@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Card, Button } from "semantic-ui-react";
+import { Card, Button, Comment } from "semantic-ui-react";
 import Layout from "../components/Layout";
 import factory from "../ethereum/factory";
 import { Link } from "../routes";
@@ -33,6 +33,9 @@ class CampaignIndex extends Component {
     return (
       <Layout>
         <h3>Open Campaigns</h3>
+        <Comment.Metadata style={{ marginBottom: "20px" }}>
+          A completely descentralized app to raise money and fund projects
+        </Comment.Metadata>
         <Link route="/campaigns/new">
           <a>
             <Button

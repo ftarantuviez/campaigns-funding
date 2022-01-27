@@ -21,6 +21,9 @@ export default class RequestNew extends Component {
 
   onSubmit = async (event) => {
     event.preventDefault();
+    if (!window.ethereum) {
+      return alert("Please install Metamask!");
+    }
 
     const campaign = getCampaign(this.props.address);
     const { description, value, recipient } = this.state;

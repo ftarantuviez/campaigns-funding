@@ -9,3 +9,7 @@ A completely descentralized app to raise money and fund projects
 ### Run app
 
     npm run dev
+
+## App deployed
+
+https://campaigns-funding.vercel.app/

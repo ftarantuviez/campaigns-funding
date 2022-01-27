@@ -3,8 +3,8 @@ const Web3 = require("web3");
 const compiledFactory = require("./build/CampaignFactory.json");
 
 const provider = new HDWalletProvider(
-  "priority march mass review achieve into fence idea fantasy school machine chunk",
-  "https://rinkeby.infura.io/v3/a5baeec841194a21bcfc8e0182e77504"
+  process.env.WALLET,
+  proccess.env.INFURA_URL
 );
 const web3 = new Web3(provider);
 

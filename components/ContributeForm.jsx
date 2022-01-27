@@ -13,6 +13,9 @@ export default class ContributeForm extends Component {
 
   onSubmit = async (e) => {
     e.preventDefault();
+    if (!window.ethereum) {
+      return alert("Please install Metamask!");
+    }
     this.setState({ loading: true, errorMessage: "" });
     try {
       const campaign = getCampaign(this.props.address);

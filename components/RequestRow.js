@@ -9,6 +9,9 @@ export default class RequestRow extends Component {
     loading: false,
   };
   onApprove = async () => {
+    if (!window.ethereum) {
+      return alert("Please install Metamask!");
+    }
     this.setState({ loading: true });
     try {
       const campaign = getCampaign(this.props.address);
@@ -27,6 +30,9 @@ export default class RequestRow extends Component {
   };
 
   onFinalize = async () => {
+    if (!window.ethereum) {
+      return alert("Please install Metamask!");
+    }
     this.setState({ loading: true });
     try {
       const campaign = getCampaign(this.props.address);
